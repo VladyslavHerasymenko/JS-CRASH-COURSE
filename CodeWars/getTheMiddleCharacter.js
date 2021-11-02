@@ -2,7 +2,7 @@
 
 function getMiddle(s)
 {
-  if (Math.round(s.length/2) == s.length/2) {
+  if (s.length % 2 == 0) {
     index = s.length/2;
     result = (s[index - 1] + s[index]);
   } else {
