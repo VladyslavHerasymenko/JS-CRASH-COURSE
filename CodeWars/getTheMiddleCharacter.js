@@ -10,4 +10,4 @@ function getMiddle(s)
     result = s[index - 1];
   }
   return result;
-}.log(result);
+}
