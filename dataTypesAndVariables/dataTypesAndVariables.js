@@ -1,22 +1,13 @@
-// primitive
+/*
+    Primitive date types
+*/
 
-const one = 1;
-const name = "Vlad";
-const emptyVar = null;
+const a = 1;
+let b = "Text";
+let d;
+const f = Symbol('Symbol');
 
-let varShouldBeUpdated = null;
-
-const a = "a";
-const A = "A";
-
-let temp = undefined;
-
-const obj = {
-    a: 1,
-    name: "Test",
-}
-
-const ar = [];
-
-console.log(one);
-console.log('It is name variable', name);
+// Перевірки типів данних
+console.log(typeof a == b);
+console.log(typeof d);
+console.log(f.constructor);
