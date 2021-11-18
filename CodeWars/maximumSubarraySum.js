@@ -3,18 +3,13 @@
 var maxSequence = function(arr){
     let max_sum = 0;
     for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length + 1; j++) {
-            if (countSum(arr, i, j) > max_sum) {
-                max_sum = countSum(arr, i, j)
-            }
+        for (let j = i + 1; j <= arr.length; j++) {
+            let cur_sum = arr.slice(i,j).reduce((total, amount) => total + amount)
+            if (cur_sum > max_sum) {max_sum = cur_sum}
         }
     }
     return max_sum
-  }
-function countSum (array, i, j) {
-    return array.slice(i,j).reduce((total, amount) => total + amount)
 }
-
 
 const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 console.log(maxSequence(arr));
